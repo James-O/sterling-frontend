@@ -4,20 +4,28 @@ import { CTAButton, AnimateY } from "../partials";
 
 export default function Hero() {
   return (
-    <section>
-      <div className="bg-dim-black pb-20 pt-[90px]  text-white md:pb-[110px]">
-        <div className="mx-auto px-6 sm:max-w-2xl md:max-w-3xl lg:max-w-[1280px] lg:px-0">
+    <section className="relative">
+      <div className="w-full h-full">
+        <img src="/hero-img.png" alt="Tech Image" className="w-full lg:h-full md:h-[750px] h-[450px] object-cover" />
+      </div>
+      {/* <div className="bg-dim-black pb-20 pt-[90px]  text-white md:pb-[110px]"> */}
+      <div className="lg:pt-24 md:pt-16 pt-12 bg-black/50 text-white md:pb-16 absolute top-0 left-0 w-full">
+        <div className="px-6 md:px-16 lg:px-20 w-full">
           <div className="space-y-6 pt-20 md:min-h-screen">
             <AnimateY staggerAmount={0.35}>
-              <h2 className="w-[327px] text-sm leading-[150%] md:w-[411px] md:text-xl">
-                We are committed to constantly exploring new ideas, and
-                harnessing innovation to drive your success
+              {/* <h2 className="w-[327px] text-sm leading-[150%] md:w-[411px] md:text-xl"> */}
+              <h2 className="text-sm leading-[150%] md:text-xl md:w-[400px] lg:w-[600px]">
+                <div className="w-full">
+                  We are committed to constantly exploring new ideas, and
+                  harnessing innovation to drive your success
+                </div>
               </h2>
             </AnimateY>
 
-            <div className="space-y-10">
+            <div className="space-y-6 md:space-y-10">
               <AnimateY staggerAmount={0.45}>
-                <h1 className="w-80 text-[2.5rem] font-semibold leading-[150%] tracking-tight md:w-[800px]  md:text-8xl lg:w-[1200px] lg:leading-[140%]">
+                {/* <h1 className="text-[1rem] font-semibold leading-[150%] tracking-tight md:w-[800px]  md:text-8xl lg:w-[1200px] lg:leading-[140%]"> */}
+                <h1 className="text-[2rem] font-semibold leading-[150%] tracking-tight  md:text-6xl lg:text-7xl  lg:leading-[140%]">
                   Shaping A Smarter World{" "}
                   <span className="text-primary">
                     Our Vision, Your Solution.
@@ -37,9 +45,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div>
-        <img src="/hero-img.png" alt="Tech Image" />
-      </div>
+
     </section>
   );
 }

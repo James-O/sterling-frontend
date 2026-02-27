@@ -5,6 +5,7 @@ import {
   Work,
   WhyChooseUs,
   PartnersAndClients,
+  Reviews
 } from "@/components/home";
 import { CollaborateWithUs } from "@/components/partials";
 
@@ -17,6 +18,7 @@ export default function Home() {
       <WhyChooseUs />
       <PartnersAndClients />
       <CollaborateWithUs />
+      <Reviews/>
     </AppLayout>
   );
 }
