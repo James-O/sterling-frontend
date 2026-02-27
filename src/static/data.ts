@@ -63,17 +63,67 @@ export const partners = [
   "/utiliflex.png",
 ];
 
+// export const reasonList = [
+//   {
+//     id: 1,
+//     title: "Expertise that Matters",
+//     body: "Our team comprises experienced technologists, engineers, and innovators who have been at the forefront of technological advancements for over a decade",
+//     stagger: 0.1,
+//   },
+//   {
+//     id: 2,
+//     title: "Tailored to Your Needs",
+//     body: "We pride ourself on customizing tech solutions to meet your unique requirements. We work closely with you to find the perfect fit for your business.",
+//     stagger: 0.2,
+//   },
+// ];
 export const reasonList = [
   {
     id: 1,
     title: "Expertise that Matters",
-    body: "Our team comprises experienced technologists, engineers, and innovators who have been at the forefront of technological advancements for over a decade",
+    body: "Our team comprises experienced technologists, engineers, and innovators who have been at the forefront of technological advancements for over a decade.",
     stagger: 0.1,
   },
   {
     id: 2,
     title: "Tailored to Your Needs",
-    body: "We pride ourself on customizing tech solutions to meet your unique requirements. We work closely with you to find the perfect fit for your business.",
+    body: "We pride ourselves on customizing tech solutions to meet your unique requirements. We work closely with you to find the perfect fit for your business.",
     stagger: 0.2,
+  },
+  {
+    id: 3,
+    title: "Proven Industry Experience",
+    body: "We have successfully delivered mission-critical systems for leading energy and utility companies, ensuring operational efficiency and reliability at scale.",
+    stagger: 0.3,
+  },
+  {
+    id: 4,
+    title: "Scalable & Future-Ready Solutions",
+    body: "Our solutions are built with scalability in mind — designed to grow with your organization and adapt to evolving technological and regulatory demands.",
+    stagger: 0.4,
+  },
+  {
+    id: 5,
+    title: "Security & Compliance First",
+    body: "We prioritize data protection, regulatory compliance, and system integrity, implementing industry best practices to safeguard your operations.",
+    stagger: 0.5,
+  },
+  {
+    id: 6,
+    title: "Reliable Support & Maintenance",
+    body: "Our partnership doesn’t end at deployment. We provide continuous monitoring, proactive support, and long-term maintenance to ensure uninterrupted performance.",
+    stagger: 0.6,
+  },
+  {
+    id: 7,
+    title: "Innovation-Driven Approach",
+    body: "We leverage modern technologies and forward-thinking strategies to deliver solutions that improve efficiency, reduce costs, and create measurable impact.",
+    stagger: 0.7,
+  },
+  {
+    id: 8,
+    title: "On-Time & On-Budget Delivery",
+    body: "We follow structured project management processes to ensure transparent communication, predictable timelines, and consistent delivery excellence.",
+    stagger: 0.8,
   },
 ];

@@ -8,7 +8,7 @@ interface IServiceCard {
 
 export default function ServiceCard(props: IServiceCard) {
   return (
-    <div className="space-y-6 bg-white p-10">
+    <div className="space-y-6 bg-white p-10 h-full rounded-lg hover:shadow-lg transition-shadow duration-300">
       <div className="flex w-max items-center justify-center rounded-md bg-primary p-4">
         <CardIcon />
       </div>
