@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Container } from "@/layouts";
 import { RightArrow } from "../icons";
+import Image from "next/image";
 
 export default function Navbar() {
   return (
@@ -11,7 +12,8 @@ export default function Navbar() {
           <div className="flex gap-10">
             <Link href={"/"}>
               <div className="flex items-center gap-2">
-                <img src="/sterling-logo.png" alt="" />
+                {/* <img src="/sterling-logo.png" alt="" /> */}
+                <Image src="/images/sterlingLogo2.jpeg" alt="logo" width={50} height={50} />
                 <p className="hidden text-xl font-semibold md:block">
                   Sterling
                 </p>
@@ -28,7 +30,10 @@ export default function Navbar() {
                 <Link href={"/services"}>Services</Link>
               </li>
               <li>
-                <a href={"#work"}>Work</a>
+                <Link href={"/about"}>About</Link>
+              </li>
+              <li>
+                <Link href={"/contact"}>Contact</Link>
               </li>
             </ul>
             <button className="group hidden items-center gap-2 rounded-3xl border border-primary px-4 py-2 text-primary transition-all duration-100 hover:bg-primary hover:text-black md:flex">

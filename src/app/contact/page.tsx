@@ -3,7 +3,12 @@ import { AppLayout } from "@/layouts";
 import { ContactForm } from "@/components/contact-us";
 import { PageHeader } from "@/components/partials";
 
-export default function Services() {
+export const metadata = {
+  title: "Contact Us - Sterling Technologies & Systems",
+  description: "Fill out the form below to get in contact with us",
+};
+
+export default function Contact() {
   return (
     <AppLayout>
       <PageHeader
