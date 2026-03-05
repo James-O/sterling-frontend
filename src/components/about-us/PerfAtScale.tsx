@@ -33,9 +33,10 @@ export default function PerformanceAtScale({
                             {item.icon && (
                                 <img src={item.icon} alt={item.title} className="mx-auto h-10 w-10 text-primary" />
                             )}
-                            <h3 className="text-lg font-semibold my-5">{item.title}</h3>
+                            <p className="text-3xl font-bold text-blue-950 my-2">{item.stat}</p>
+                            <h3 className="my-4 font-bold">{item.title}</h3>
                             <p className="text-gray-700">{item.text}</p>
-                            <p className="text-gray-600 mt-2 font-semibold">{item.stat}</p>
+                            
                         </div>
                     ))}
                 </div>

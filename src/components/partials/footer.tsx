@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "@/layouts";
 import { LinkedIn, Twitter, Facebook } from "../icons";
 import Link from "next/link";
+import MapSection from "../about-us/Map";
 
 export default function Footer() {
   const currentYear = new Intl.DateTimeFormat("en-US", {
@@ -14,13 +15,16 @@ export default function Footer() {
           <div className="flex flex-col space-y-4">
             <Link href={"/"}>
               <div className="flex items-center gap-2">
-                <img src="/sterling-logo.png" alt="" />
+                <img src="/images/sterlingLogo2.jpeg" alt="Sterling Technologies" 
+                  className="w-12 h-12 rounded"
+                />
                 <p className="text-xl font-semibold">Sterling</p>
               </div>
             </Link>
-            <Link href={"#"}>About us</Link>
-            <Link href={"#"}>Contact</Link>
+            <Link href={"/about"}>About us</Link>
+            <Link href={"/contact"}>Contact</Link>
             <Link href={"#"}>Jobs</Link>
+            <MapSection />
           </div>
 
           <div>
