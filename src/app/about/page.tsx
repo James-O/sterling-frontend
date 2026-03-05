@@ -2,6 +2,8 @@ import React from 'react'
 import { AppLayout } from "@/layouts";
 import Hero from '@/components/about-us/Hero';
 import PerformanceAtScale from '@/components/about-us/PerfAtScale';
+import ScaleAndImpact from '@/components/about-us/ScaleAndImpact';
+import IntegratedSolution from '@/components/about-us/Solution';
 
 export const metadata = {
   title: "About Us - Sterling Technologies & Systems",
@@ -14,6 +16,8 @@ export default function About() {
       <div>
         <Hero />
         <PerformanceAtScale />
+        <ScaleAndImpact />
+        <IntegratedSolution />
       </div>
     </AppLayout>
   )
