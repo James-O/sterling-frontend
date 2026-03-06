@@ -12,7 +12,7 @@ interface IPageHeader {
 
 export default function PageHeader(props: IPageHeader) {
   return (
-    <div className="bg-dim-black pb-10 pt-[90px]  text-white md:pb-20">
+    <div className="bg-blue-950 pb-10 pt-[90px]  text-white md:pb-20">
       <Container>
         {/* <div className="sm:max-w-2xl md:max-w-3xl lg:max-w-[1280px] lg:px-0"> */}
         <div className="">

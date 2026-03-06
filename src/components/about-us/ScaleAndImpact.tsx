@@ -1,8 +1,9 @@
 'use client'
 import { Container } from '@/layouts'
-import React from 'react'
+import React, { useEffect } from 'react'
 import MapSection from './Map'
 import CountUp from 'react-countup';
+import AOS from 'aos';
 
 const scaleData = [
     {
@@ -39,6 +40,10 @@ const scaleData = [
     }
 ]
 export default function ScaleAndImpact() {
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: true });
+        AOS.refresh();
+    }, []);
     return (
         <div className='bg-blue-950 py-16'>
             <Container>
@@ -47,7 +52,7 @@ export default function ScaleAndImpact() {
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 h-full'>
                     {scaleData.map((item) => (
-                        <div key={item.id} className='text-center bg-white border p-6 rounded-lg shadow-lg hover:shadow-lg transition-shadow h-full'>
+                        <div data-aos="zoom-in" key={item.id} className='text-center bg-white border p-6 rounded-lg shadow-lg hover:shadow-lg transition-shadow h-full'>
                             <div className='flex items-center justify-center w-12 h-12 mx-auto mb-4'>
                                 <img src={item.icon} alt={item.title} className='w-full h-full' />
                             </div>

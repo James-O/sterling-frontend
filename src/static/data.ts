@@ -2,31 +2,37 @@ import { Database } from "lucide-react";
 export const serviceList = [
   {
     id: 1,
+    icon: "/images/vend.png",
     title: "Energy Vending",
     body: "We provide services that enable the sale and distribution of electricity or other forms of energy to consumers through self-service kiosks, mobile apps, or other convenient means.",
   },
   {
     id: 2,
+    icon: "/images/erpicon.png",
     title: "ERP Application Development",
     body: "We help  integrate various business processes and functions into a single, unified system, streamlining operations and facilitating data flow across an organization.",
   },
   {
     id: 3,
+    icon: "/images/payment.png",
     title: "Payment Collection",
     body: "We provide services that help businesses and organizations streamline and manage the process of collecting payments from customers or clients.",
   },
   {
     id: 4,
+    icon: "/images/data.png",
     title: "Data Collection & Monitoring",
     body: "We develop systems that collect and monitor data from various utility meters and sensors in real-time. This data can include energy usage, water consumption, temperature, and more.",
   },
   {
     id: 5,
+    icon: "/images/iot.png",
     title: "IOT Services",
     body: "We leverage the potential of IOT technologies to improve operations, enhance operations, and give our clients a competitive edge in the ever shifting and evolving market of today’s day and age.",
   },
   {
     id: 6,
+    icon: "/images/ai.webp",
     title: "Business Analysis & AI",
     body: "We help organizations analyze, and interpret data to make informed business decisions. We leverage AI to  enhance this process by automating data collection and analysis, providing deeper insights, and identifying trends.",
   },

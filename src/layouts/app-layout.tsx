@@ -1,6 +1,9 @@
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Head from "next/head";
 import { Navbar, Footer } from "@/components/partials";
+import 'aos/dist/aos.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 interface ILayoutProps {
   title: string;

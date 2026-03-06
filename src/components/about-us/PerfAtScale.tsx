@@ -1,6 +1,7 @@
 import { Container } from '@/layouts';
 import { performanceList as defaultPerformanceList } from '@/static/data';
 import React from 'react';
+import { AnimateY } from '../partials';
 
 // define a reusable type for a single performance item
 export interface PerformanceItem {
@@ -29,15 +30,16 @@ export default function PerformanceAtScale({
                 </div>
                 <div className="grid gap-6 grid-cols-1 lg:grid-cols-3 h-full">
                     {items.map((item) => (
-                        <div key={item.id} className="items-center text-center p-6 border rounded-lg shadow hover:shadow-lg transition-shadow h-full hover:bg-gray-50 ">
-                            {item.icon && (
-                                <img src={item.icon} alt={item.title} className="mx-auto h-10 w-10 text-primary" />
-                            )}
-                            <p className="text-3xl font-bold text-blue-950 my-2">{item.stat}</p>
-                            <h3 className="my-4 font-bold">{item.title}</h3>
-                            <p className="text-gray-700">{item.text}</p>
-                            
-                        </div>
+                        <AnimateY staggerAmount={0.45}>
+                            <div key={item.id} className="items-center text-center p-6 border rounded-lg shadow hover:shadow-lg transition-shadow h-full hover:bg-gray-50 ">
+                                {item.icon && (
+                                    <img src={item.icon} alt={item.title} className="mx-auto h-10 w-10 text-primary" />
+                                )}
+                                <p className="text-3xl font-bold text-blue-950 my-2">{item.stat}</p>
+                                <h3 className="my-4 font-bold">{item.title}</h3>
+                                <p className="text-gray-700">{item.text}</p>
+                            </div>
+                        </AnimateY>
                     ))}
                 </div>
             </Container>
