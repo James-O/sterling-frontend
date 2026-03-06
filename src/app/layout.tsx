@@ -17,9 +17,10 @@ export default function RootLayout({
       <head>
         <link
           rel="icon"
-          type="image/png"
+          type="image/jpeg"
           sizes="32x32"
-          href="/sterling-logo.png"
+          href="/images/sterlingLogo2.jpeg"
+          className="rounded"
         />
       </head>
       <body>

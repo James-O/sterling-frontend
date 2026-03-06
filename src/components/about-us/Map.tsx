@@ -9,7 +9,7 @@ export default function MapSection() {
         height="100%"
         style={{ border: 0 }}
         //allowFullScreen=""
-        loading="lazy"
+        // loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
         title="Google Map"
       ></iframe>
