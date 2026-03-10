@@ -11,7 +11,8 @@ export default function Footer() {
   return (
     <footer className="pb-10 pt-6 bg-black text-white/70">
       <Container>
-        <div className="flex flex-col justify-between md:flex-row">
+        {/* <div className="flex flex-col justify-between md:flex-row"> */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="flex flex-col space-y-4">
             <Link href={"/"}>
               <div className="flex items-center gap-2">

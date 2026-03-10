@@ -4,6 +4,8 @@ import Hero from '@/components/about-us/Hero';
 import PerformanceAtScale from '@/components/about-us/PerfAtScale';
 import ScaleAndImpact from '@/components/about-us/ScaleAndImpact';
 import IntegratedSolution from '@/components/about-us/Solution';
+import CompetitiveAdvantage from '@/components/about-us/CompetitiveAdvantage';
+import CaseStudies from '@/components/about-us/CaseStudies';
 
 export const metadata = {
   title: "About Us - Sterling Technologies & Systems",
@@ -18,6 +20,8 @@ export default function About() {
         <PerformanceAtScale />
         <ScaleAndImpact />
         <IntegratedSolution />
+        <CompetitiveAdvantage />
+        <CaseStudies />
       </div>
     </AppLayout>
   )

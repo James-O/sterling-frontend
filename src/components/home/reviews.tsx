@@ -2,6 +2,8 @@
 import Image from "next/image";
 import { Star } from "lucide-react";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const reviews = [
   {
@@ -42,43 +44,69 @@ const reviews = [
 ];
 
 export const Reviews = () => {
-  var settings = {
-    dots: true,
-    pauseOnHover: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    cssEase: "ease-in-out",
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 770,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
+  const settings = {
+  dots: true,
+  pauseOnHover: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  cssEase: "ease-in-out",
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2
       }
-    ]
-  };
+    },
+    {
+      breakpoint: 640,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
+};
+  // var settings = {
+  //   dots: true,
+  //   pauseOnHover: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 2000,
+  //   cssEase: "ease-in-out",
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 3,
+  //         infinite: true,
+  //         dots: true
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 770,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //         initialSlide: 2
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //         initialSlide: 1
+  //       }
+  //     }
+  //   ]
+  // };
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
@@ -99,7 +127,7 @@ export const Reviews = () => {
           <Slider {...settings}>
             {reviews.map((client) => (
               <div key={client.id} className="px-3">
-                <div className="bg-white rounded-2xl p-4 md:p-8 h-[300px] shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <div className="bg-white rounded-2xl p-4 md:p-8 min-h-[300px] shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
                   {/* Stars */}
                   <div className="flex mb-4 text-yellow-500">
                     {[...Array(5)].map((_, i) => (
@@ -108,12 +136,12 @@ export const Reviews = () => {
                   </div>
 
                   {/* Review Text */}
-                  <p className="text-gray-600 leading-relaxed mb-2 md:mb-6">
-                    “{client.review}”
+                  <p className="text-gray-600 leading-relaxed mb-4 md:mb-6 flex-grow">
+                    "{client.review}"
                   </p>
 
                   {/* Client Info */}
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-4 mt-auto">
                     <div className="relative w-14 h-14">
                       <Image
                         src={client.logo}
