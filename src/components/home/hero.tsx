@@ -17,16 +17,22 @@ export default function Hero() {
     cssEase: "linear"
   };
   return (
-    <div className="w-full h-full pt-10">
+    // <div className="w-full h-full pt-10">
+    <div className="w-full overflow-x-hidden overflow-y-hidden pt-10">
       <Slider {...settings}>
         <div className="relative">
-          <h3>
-            <img src="/hero-img.png" alt="Tech Image" className="w-full lg:h-[540px] md:h-[600px] h-[450px] object-cover" />
-          </h3>
+          <div className="relative w-full h-[450px] md:h-[600px] lg:h-[580px]">
+            <img
+              src="/hero-img.png"
+              alt="Tech Image"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
 
-          <div className="lg:pt-10 md:pt-6 pt-2 bg-black/50 text-white md:pb-16 absolute top-0 left-0 w-full">
+          <div className="pt-10 bg-black/50 text-white md:pb-16 absolute top-0 left-0 w-full">
             <div className="px-6 md:px-16 lg:px-20 w-full">
-              <div className="space-y-6 pt-20 md:min-h-screen">
+              {/* <div className="space-y-6 pt-20 md:min-h-screen"> */}
+              <div className="space-y-6 pt-16 md:pt-20">
                 <AnimateY staggerAmount={0.35}>
 
                   <h2 className="text-sm leading-[150%] md:text-xl md:w-[400px] lg:w-[600px]">
@@ -60,13 +66,17 @@ export default function Hero() {
           </div>
         </div>
         <div className="relative">
-          <h3>
-            <img src="/images/erp.jpg" alt="ERP Image" className="w-full lg:h-[540px] md:h-[600px] h-[450px] object-cover" />
-          </h3>
+         <div className="relative w-full h-[450px] md:h-[600px] lg:h-[580px]">
+            <img 
+              src="/images/erp.jpg" 
+              alt="ERP Image" 
+              className="absolute inset-0 w-full h-full object-cover" 
+            />
+         </div>
 
-          <div className="lg:pt-10 md:pt-6 pt-2 bg-black/50 text-white md:pb-16 absolute top-0 left-0 w-full">
+          <div className="pt-10 bg-black/50 text-white md:pb-16 absolute top-0 left-0 w-full">
             <div className="px-6 md:px-16 lg:px-20 w-full">
-              <div className="space-y-6 pt-20 md:min-h-screen">
+              <div className="space-y-6 pt-16 md:pt-20">
                 <AnimateY staggerAmount={0.35}>
 
                   <h2 className="text-sm leading-[150%] md:text-xl md:w-[400px] lg:w-[600px]">
@@ -100,13 +110,17 @@ export default function Hero() {
           </div>
         </div>
         <div className="relative">
-          <h3>
-            <img src="/images/erp7.webp" alt="AI Image" className="w-full lg:h-[540px] md:h-[600px] h-[450px] object-cover" />
-          </h3>
+          <div className="relative w-full h-[450px] md:h-[600px] lg:h-[580px]">
+            <img 
+              src="/images/erp7.webp" 
+              alt="AI Image"
+              className="absolute inset-0 w-full h-full object-cover" 
+            />
+         </div>
 
-          <div className="lg:pt-10 md:pt-6 pt-2 bg-black/50 text-white md:pb-16 absolute top-0 left-0 w-full">
+          <div className="pt-10 bg-black/50 text-white md:pb-16 absolute top-0 left-0 w-full">
             <div className="px-6 md:px-16 lg:px-20 w-full">
-              <div className="space-y-6 pt-20 md:min-h-screen">
+              <div className="space-y-6 pt-16 md:pt-20">
                 <AnimateY staggerAmount={0.35}>
 
                   <h2 className="text-sm leading-[150%] md:text-xl md:w-[400px] lg:w-[600px]">
@@ -140,13 +154,17 @@ export default function Hero() {
           </div>
         </div>
         <div className="relative">
-          <h3>
-            <img src="/images/quickcash4.jpg" alt="quick cash" className="w-full lg:h-[540px] md:h-[600px] h-[450px] object-cover" />
-          </h3>
-
-          <div className="lg:pt-10 md:pt-6 pt-2 bg-black/50 text-white md:pb-16 absolute top-0 left-0 w-full">
+          <div className="relative w-full h-[450px] md:h-[600px] lg:h-[580px]">
+            <img 
+              src="/images/quickcash4.jpg" 
+              alt="quick cash"
+              className="absolute inset-0 w-full h-full object-cover" 
+            />
+         </div>
+          
+          <div className="pt-10 bg-black/50 text-white md:pb-16 absolute top-0 left-0 w-full">
             <div className="px-6 md:px-16 lg:px-20 w-full">
-              <div className="space-y-6 pt-20 md:min-h-screen">
+              <div className="space-y-6 pt-16 md:pt-20">
                 <AnimateY staggerAmount={0.35}>
 
                   <h2 className="text-sm leading-[150%] md:text-xl md:w-[400px] lg:w-[600px]">
@@ -180,13 +198,17 @@ export default function Hero() {
           </div>
         </div>
         <div className="relative">
-          <h3>
-            <img src="/images/iotimg.jpg" alt="IoT Image" className="w-full lg:h-[540px] md:h-[600px] h-[450px] object-cover" />
-          </h3>
+          <div className="relative w-full h-[450px] md:h-[600px] lg:h-[580px]">
+            <img 
+              src="/images/iotimg.jpg"
+              alt="IoT Image"
+              className="absolute inset-0 w-full h-full object-cover" 
+            />
+         </div>
 
-          <div className="lg:pt-10 md:pt-6 pt-2 bg-black/50 text-white md:pb-16 absolute top-0 left-0 w-full">
+          <div className="pt-10 bg-black/50 text-white md:pb-16 absolute top-0 left-0 w-full">
             <div className="px-6 md:px-16 lg:px-20 w-full">
-              <div className="space-y-6 pt-20 md:min-h-screen">
+              <div className="space-y-6 pt-16 md:pt-20">
                 <AnimateY staggerAmount={0.35}>
 
                   <h2 className="text-sm leading-[150%] md:text-xl md:w-[400px] lg:w-[600px]">
