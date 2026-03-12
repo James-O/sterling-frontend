@@ -3,6 +3,7 @@ import { Container } from '@/layouts';
 import React from 'react'
 import Slider from "react-slick";
 import { Btn } from '../partials/cta-button';
+import Link from 'next/link';
 const caseStudies = [
     {
         id: 1,
@@ -68,7 +69,7 @@ export default function CaseStudies() {
                 {/* <div className='grid gap-8 mt-10'> */}
                 <Slider {...settings}>
                     {caseStudies.map((study) => (
-                        <div key={study.id} className='bg-gray-100 rounded-lg p-6 space-y-3 border'>
+                        <div key={study.id} className='bg-gray-50 rounded-md p-6 space-y-3 border'>
                             <div className='flex items-center'>
                                 <img src={study.image} alt={study.title} className='mx-auto'/>
                             </div>
@@ -82,8 +83,12 @@ export default function CaseStudies() {
                                     <li className='list-disc list-inside ml-5' key={index}>{result}</li>
                                 ))}
                             </ul>
-                            {study.quote && <blockquote className='italic text-gray-600'>"{study.quote}"</blockquote>}
-                            <Btn title='Read Full Case Study' />
+                            <div className='pb-5'>
+                                {study.quote && <blockquote className='italic text-gray-600'>"{study.quote}"</blockquote>}
+                            </div>
+                            <Link href={"#"} className=''>
+                                <Btn title='Read Full Case Study' />
+                            </Link>
                         </div>
                     ))}
                 </Slider>

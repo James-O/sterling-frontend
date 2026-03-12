@@ -26,7 +26,7 @@ export default function CompetitiveAdvantage() {
         <div className='my-20 bg-blue-950 py-16 text-white'>
             <Container>
                 <h1 className='font-bold md:text-3xl text-center mb-4'>Why Leading Utilities Choose Sterling</h1>
-                <div className='overflow-x-auto rounded-lg shadow-lg'>
+                <div className='overflow-x-auto rounded-md shadow-lg'>
                     <table className='collapsed border-collapse border w-full text-left divide-y divide-gray-300 min-w-full'>
                         <thead className='bg-gray-200'>
                             <tr className='text-gray-900 font-semibold md:text-lg h-12'>
