@@ -30,10 +30,26 @@ export default function TechStack() {
         {
             id: 4,
             title: " Tech Stack:",
-            service1: "Backend: Node.js, Python, Go",
-            service2: "Frontend: React, Next.js",
-            service3: "Mobile: React Native (iOS & Android)",
-            service4: "Database: PostgreSQL, Redis, TimescaleDB",
+            service1: (
+                <>
+                    <span className='font-bold'>Backend:</span> Node.js, Python, Go
+                </>
+            ),
+            service2: (
+                <>
+                    <span className='font-bold'>Frontend:</span> React, Next.js
+                </>
+            ),
+            service3: (
+                <>
+                    <span className='font-bold'>Mobile:</span> React Native (iOS & Android)
+                </>
+            ),
+            service4: (
+                <>
+                    <span className='font-bold'>Database:</span> PostgreSQL, Redis, TimescaleDB
+                </>
+            ),
         },
     ]
     return (
