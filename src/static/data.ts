@@ -70,20 +70,6 @@ export const partners = [
   "/utiliflex.png",
 ];
 
-// export const reasonList = [
-//   {
-//     id: 1,
-//     title: "Expertise that Matters",
-//     body: "Our team comprises experienced technologists, engineers, and innovators who have been at the forefront of technological advancements for over a decade",
-//     stagger: 0.1,
-//   },
-//   {
-//     id: 2,
-//     title: "Tailored to Your Needs",
-//     body: "We pride ourself on customizing tech solutions to meet your unique requirements. We work closely with you to find the perfect fit for your business.",
-//     stagger: 0.2,
-//   },
-// ];
 export const reasonList = [
   {
     id: 1,
@@ -157,25 +143,4 @@ export const performanceList = [
     text: "Cloud-native architecture with automatic failover and disaster recovery.",
     stat: "99.9% uptime SLA"
   },
-  // {
-  //   id: 4,
-  //   icon: "/icon-4.png",
-  //   title: "Security",
-  //   text: "We implement industry-leading security practices to protect your data and ensure compliance with regulatory standards.",
-  //   stat: "Compliant with industry regulations"
-  // },
-  // {
-  //   id: 5,
-  //   icon: "/icon-5.png",
-  //   title: "Maintainability",
-  //   text: "Our code is clean, modular, and well-documented, making it easier to maintain and extend as your needs evolve.",
-  //   stat: "Easier to maintain and extend"
-  // },
-  // {
-  //   id: 6,
-  //   icon: "/icon-6.png",
-  //   title: "Cost-Effectiveness",
-  //   text: "We design solutions that maximize value while minimizing costs, ensuring a strong return on investment.",
-  //   stat: "Maximized ROI"
-  // },
 ];

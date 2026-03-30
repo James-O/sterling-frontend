@@ -1,7 +1,19 @@
+
+import Hero from '@/components/productsNservices/Hero'
+import Integration from '@/components/productsNservices/Integration'
+import Products from '@/components/productsNservices/Products'
+import Services, { serviceList } from '@/components/productsNservices/Services'
+import { AppLayout } from '@/layouts'
 import React from 'react'
 
-export default function Products() {
+export default function ProductsAndServices() {
+
   return (
-    <div>Products</div>
+    <AppLayout>
+      <Hero/>
+      <Products/>
+      <Services data={serviceList} />
+      <Integration/>
+    </AppLayout>
   )
 }

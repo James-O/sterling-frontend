@@ -53,6 +53,11 @@ export default function Navbar() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link href={"/product"} className={isActive("/product")}>
+                  Products
+                </Link>
+              </li>
             </ul>
             <button className="group hidden items-center gap-2 rounded-3xl border border-primary px-4 py-2 text-primary transition-all duration-100 hover:bg-primary hover:text-black lg:flex">
               <Link href={"/contact"}>
@@ -109,6 +114,15 @@ export default function Navbar() {
                       onClick={() => setIsOpen(false)}
                     >
                       Contact
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/product"
+                      className={isActive("/product")}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Products
                     </Link>
                   </li>
                 </ul>
