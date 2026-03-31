@@ -45,9 +45,9 @@ export default function Products() {
         { id: 'postpaid', label: 'Postpaid Billing' },
         { id: 'analytics', label: 'SPI/Analytics' },
     ];
-    useEffect(()=>{
+    useEffect(() => {
         Aos.init()
-    },[])
+    }, [])
     return (
         <div>
             <div className="my-20">
@@ -56,18 +56,25 @@ export default function Products() {
                         <h2 className='font-bold items-center text-2xl'>Our Products</h2>
                         <h2 className='font-bold items-center text-2xl'>
                             Enterprise-grade utility management  │
-                        │   platforms built for scale</h2>
+                            │   platforms built for scale</h2>
                     </div>
-                    <div className="flex flex-wrap justify-center gap-7 mb-8 w-full">
+                    <div
+                        className="flex gap-4 w-full mb-8 pb-2 overflow-x-auto 
+                        whitespace-nowrap sm:flex-wrap sm:overflow-visible
+                        "
+                    >
                         {tabs.map(tab => (
                             <button
                                 key={tab.id}
                                 onClick={() => setActiveTab(tab.id)}
-                                className={`px-6 w-56 py-3 rounded-lg font-semibold transition-colors duration-200 ${
-                                    activeTab === tab.id
+                                className={`
+                                    px-6 py-3 rounded-lg font-semibold transition
+                                    flex-shrink-0 w-[200px] sm:w-auto
+                                    ${activeTab === tab.id
                                         ? 'bg-blue-950 text-white shadow-lg'
                                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                                }`}
+                                    }
+                            `}
                                 data-aos="zoom-out"
                             >
                                 {tab.label}
@@ -90,7 +97,7 @@ export default function Products() {
                                 </p> */}
                                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
                                     <div className='w-full' data-aos='zoom-out'>
-                                        <img src="/images/smartpower.jpg" alt="smartpower" 
+                                        <img src="/images/smartpower.jpg" alt="smartpower"
                                             className='w-full h-full object-cover'
                                         />
                                     </div>
@@ -109,8 +116,8 @@ export default function Products() {
                                     </div>
                                 </div>
                                 <div>
-                                    <Btn 
-                                        title='Learn More'    
+                                    <Btn
+                                        title='Learn More'
                                     />
                                 </div>
                             </div>
@@ -131,7 +138,7 @@ export default function Products() {
                                 </p> */}
                                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
                                     <div className='w-full' data-aos='zoom-out'>
-                                        <img src="/quick-cash.png" alt="smartpower" 
+                                        <img src="/quick-cash.png" alt="smartpower"
                                             className='w-full h-full object-cover'
                                         />
                                     </div>
@@ -150,8 +157,8 @@ export default function Products() {
                                     </div>
                                 </div>
                                 <div>
-                                    <Btn 
-                                        title='Learn More'    
+                                    <Btn
+                                        title='Learn More'
                                     />
                                 </div>
                             </div>
@@ -172,7 +179,7 @@ export default function Products() {
                                 </p> */}
                                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
                                     <div className='w-full' data-aos='zoom-out'>
-                                        <img src="/quick-pay.png" alt="smartpower" 
+                                        <img src="/quick-pay.png" alt="smartpower"
                                             className='w-full h-full object-cover'
                                         />
                                     </div>
@@ -192,8 +199,8 @@ export default function Products() {
                                     </div>
                                 </div>
                                 <div>
-                                    <Btn 
-                                        title='Learn More'    
+                                    <Btn
+                                        title='Learn More'
                                     />
                                 </div>
                             </div>
@@ -214,7 +221,7 @@ export default function Products() {
                                 </p> */}
                                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
                                     <div className='w-full' data-aos='zoom-out'>
-                                        <img src="/images/postpaid4.jpg" alt="smartpower" 
+                                        <img src="/images/postpaid4.jpg" alt="smartpower"
                                             className='w-full h-full object-cover'
                                         />
                                     </div>
@@ -235,8 +242,8 @@ export default function Products() {
                                     </div>
                                 </div>
                                 <div>
-                                    <Btn 
-                                        title='Learn More'    
+                                    <Btn
+                                        title='Learn More'
                                     />
                                 </div>
                             </div>
@@ -257,7 +264,7 @@ export default function Products() {
                                 </p> */}
                                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
                                     <div className='w-full' data-aos='zoom-out'>
-                                        <img src="/images/spi.jpg" alt="smartpower" 
+                                        <img src="/images/spi.jpg" alt="smartpower"
                                             className='w-full h-full object-cover'
                                         />
                                     </div>
@@ -279,8 +286,8 @@ export default function Products() {
                                     </div>
                                 </div>
                                 <div>
-                                    <Btn 
-                                        title='Learn More'    
+                                    <Btn
+                                        title='Learn More'
                                     />
                                 </div>
                             </div>

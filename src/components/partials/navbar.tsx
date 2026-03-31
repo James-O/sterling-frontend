@@ -38,11 +38,11 @@ export default function Navbar() {
                   Home
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href={"/services"} className={isActive("/services")}>
                   Services
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href={"/about"} className={isActive("/about")}>
                   About
@@ -55,7 +55,7 @@ export default function Navbar() {
               </li>
               <li>
                 <Link href={"/product"} className={isActive("/product")}>
-                  Products
+                  Products and Services
                 </Link>
               </li>
             </ul>
@@ -87,7 +87,7 @@ export default function Navbar() {
                     </Link>
                   </li>
 
-                  <li>
+                  {/* <li>
                     <Link
                       href="/services"
                       className={isActive("/services")}
@@ -95,7 +95,7 @@ export default function Navbar() {
                     >
                       Services
                     </Link>
-                  </li>
+                  </li> */}
 
                   <li>
                     <Link
@@ -122,7 +122,7 @@ export default function Navbar() {
                       className={isActive("/product")}
                       onClick={() => setIsOpen(false)}
                     >
-                      Products
+                      Products and Services
                     </Link>
                   </li>
                 </ul>

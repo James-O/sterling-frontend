@@ -28,13 +28,16 @@ export default function Integration() {
             </ul>
           </div>
           <div>
-            <div className="py-10">
-              <div className="flex gap-4">
+            <div className="py-8">
+              {/* Tabs */}
+              <div className="flex gap-3 overflow-x-auto whitespace-nowrap pb-2 sm:flex-wrap sm:overflow-visible">
                 {steps.map((step, index) => (
                   <button
                     key={index}
                     onClick={() => setActive(index)}
-                    className={`px-4 py-2 rounded ${active === index ? 'bg-blue-950 text-white' : 'bg-gray-200 text-blue-950'
+                    className={`px-4 py-2 rounded flex-shrink-0 transition ${active === index
+                        ? 'bg-blue-950 text-white'
+                        : 'bg-gray-200 text-blue-950'
                       }`}
                   >
                     {step}
@@ -42,6 +45,7 @@ export default function Integration() {
                 ))}
               </div>
 
+              {/* Content */}
               <div className="mt-6 p-6 bg-gray-100 rounded-lg">
                 {active === 0 && <p>Sign up and generate your API key.</p>}
                 {active === 1 && <p>Send a POST request to our API.</p>}

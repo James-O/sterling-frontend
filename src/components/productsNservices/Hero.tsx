@@ -7,33 +7,31 @@ export default function Hero() {
             <div className='relative'>
                 <div>
                     <img src="/images/grid.jpg" alt="hero"
-                        className='w-full h-[620px]'
+                        className="w-full h-[820px] lg:h-[620px] object-cover"
                     />
                 </div>
-                <div className='absolute top-10 grid grid-cols-12 w-full'>
-                    <div className='col-span-9'>
-                        {/* <h1 className='text-white text-3xl font-bold'>
-                            Powering Utility Innovation  ││           Across Africa
-                        </h1> */}
+                <div className="absolute inset-0 top-4 flex flex-col lg:grid lg:grid-cols-12 items-center">
+                    <div className='lg:col-span-9'>
                         <PageHeader
-                        heading="Products & Services"
-                        className="bg-inherit text-white"
-        //                 body="Sterling Technology and Systems Limited is a leading provider of utility management technology solutions across
-        // Africa. Our integrated portfolio of products and services empowers electricity distribution companies, service
-        // operators, and institutions with the tools to drive efficiency, revenue growth, and superior customer experience."
-                        body="Sterling Technology and Systems Limited delivers integrated 
+                            heading="Products & Services"
+                            className="bg-inherit text-white text-2xl md:text-4xl lg:text-5xl font-bold"
+                            body="Sterling Technology and Systems Limited delivers integrated 
                             portfolio of products and services that empower electricity 
                             distribution companies with tools to drive efficiency, 
                             revenue growth, and superior customer experience.
                         "
-                        cta="Let's Talk Now"
-                        link="/contact"
-                    />
+                            cta="Let's Talk Now"
+                            link="/contact"
+                        />
                     </div>
-                    <div className='top-0 right-0 absolute text-white col-span-2'>
-                        <img src="/images/meter2.png" alt="meter"/>
+                    <div className='hidden lg:block top-0 right-0 absolute text-white lg:col-span-2'>
+                        <img src="/images/meter2.png" alt="meter" />
                         <h1 className='mt-[-25%] right-40 absolute font-bold text-4xl'>Our meter</h1>
                     </div>
+                </div>
+                <div className='lg:hidden block mt-[-25rem] md:mt-[-33rem] right-0 absolute text-white lg:col-span-2'>
+                    <img src="/images/meter2.png" alt="meter" />
+                    <h1 className='mt-[-25%] right-40 absolute font-bold text-2xl lg:text-4xl'>Our meter</h1>
                 </div>
             </div>
 
