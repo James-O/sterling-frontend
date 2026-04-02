@@ -61,7 +61,7 @@ export default function ContactForm() {
   return (
     <section className="py-24 bg-slate-50">
       <Container>
-        <div className="mt-[-30rem] opacity-30 flex">
+        <div className="mt-[-30rem] opacity-70 flex">
           <div className="ml-auto bg-gray-50 p-10 mb-5 rounded-lg font-bold text-2xl">
             <h1>Our Location</h1>
             <h1>
