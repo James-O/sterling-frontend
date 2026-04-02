@@ -1,5 +1,6 @@
 import { Container } from '@/layouts'
 import React from 'react'
+import MapSection from './Map'
 
 export default function TechStack() {
     const techdata = [
@@ -71,7 +72,12 @@ export default function TechStack() {
                         ))
                     }
                 </div>
+
+                <div className='mt-16 h-[350px]'>
+                    <MapSection />
+                </div>
             </Container>
+
         </div>
     )
 }

@@ -7,6 +7,7 @@ import { Container } from "@/layouts";
 import { toast } from "sonner";
 import { RightArrowCTA, LoadingSpinner } from "../icons";
 import { sanityClient } from "@/config";
+import MapSection from "../about-us/Map";
 
 interface IContactInfo {
   _type: string;
@@ -59,6 +60,16 @@ export default function ContactForm() {
 
   return (
     <section className="py-24 bg-slate-50">
+      <Container>
+        <div className="mt-[-30rem] opacity-30 flex">
+          <div className="ml-auto bg-gray-50 p-10 mb-5 rounded-lg font-bold text-2xl">
+            <h1>Our Location</h1>
+            <h1>
+              10 Chris Akinro Cl, Lekki Penninsula II, Lekki 106104, Lagos
+            </h1>
+          </div>
+        </div>
+      </Container>
       <Container>
         <div className="max-w-7xl mx-auto bg-white rounded-xl shadow p-8 md:p-14">
 
@@ -161,6 +172,10 @@ export default function ContactForm() {
             </div>
 
           </form>
+        </div>
+
+        <div className='mt-16 h-[350px]'>
+          <MapSection />
         </div>
       </Container>
     </section>

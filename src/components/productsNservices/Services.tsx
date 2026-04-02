@@ -110,7 +110,7 @@ export default function Services({ data }: ServicesProps) {
           ))}
         </div>
         <Link href="/services" className='text-center mt-10 flex justify-center'>
-          <Btn 
+          <Btn
           className="mt-10 mx-auto block text-blue-950 font-bold bg-white hover:bg-gray-100 transition-colors py-4 px-10 rounded-lg" 
           title='See More'/>
         </Link>

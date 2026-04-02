@@ -72,9 +72,9 @@ export default function ScaleAndImpact() {
                         </div>
                     ))}
                 </div>
-                <div className='mt-16 h-[350px]'>
+                {/* <div className='mt-16 h-[350px]'>
                     <MapSection />
-                </div>
+                </div> */}
             </Container>
         </div>
     )

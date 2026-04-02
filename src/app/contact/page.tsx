@@ -11,11 +11,12 @@ export const metadata = {
 export default function Contact() {
   return (
     <AppLayout>
-      <PageHeader
+        <PageHeader
         heading="Contact Us"
         body="Fill out the form below to get in contact with us"
         cta="Let's Talk Now"
         link="/contact"
+        className="bg-blue-950 text-white h-[800px]"
       />
       <ContactForm />
     </AppLayout>
