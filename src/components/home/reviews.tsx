@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import { Star } from "lucide-react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
 
 const reviews = [
   {
@@ -43,47 +43,24 @@ const reviews = [
   },
 ];
 
+
 export const Reviews = () => {
-  const settings = {
-    dots: true,
-    pauseOnHover: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    cssEase: "ease-in-out",
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 2,
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 320,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      slidesToSlide: 1 // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 1 // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1 // optional, default to 1.
+    }
   };
   return (
     <section className="py-20 bg-gray-50">
@@ -95,49 +72,62 @@ export const Reviews = () => {
             Client Reviews
           </h2>
           <p className="text-gray-600 mt-3 text-lg">
-            Here’s what our partners say about working with us
+            Here's what our partners say about working with us
           </p>
         </div>
 
         {/* Review Grid */}
         {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"> */}
-        <div className="slider-container">
-          <Slider {...settings}>
-            {reviews.map((client) => (
-              <div key={client.id} className="px-3">
-                <div className="bg-white rounded-2xl p-4 md:p-8 min-h-[300px] shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
-                  {/* Stars */}
-                  <div className="flex mb-4 text-yellow-500">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={18} fill="currentColor" />
-                    ))}
-                  </div>
+        <Carousel
+          responsive={responsive}
+          infinite
+          autoPlay
+          autoPlaySpeed={5000}
+          transitionDuration={700}
+          customTransition="transform 700ms ease-in-out"
+          swipeable
+          draggable
+          pauseOnHover
+          keyBoardControl
+          showDots
+          arrows={false}
+          containerClass="carousel-container"
+          itemClass="px-3"
+        >
+          {reviews.map((client) => (
+            <div key={client.id}>
+              <div className="bg-white rounded-2xl p-4 md:p-8 min-h-[300px] shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
+                {/* Stars */}
+                <div className="flex mb-4 text-yellow-500">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={18} fill="currentColor" />
+                  ))}
+                </div>
 
-                  {/* Review Text */}
-                  <p className="text-gray-600 leading-relaxed mb-4 md:mb-6 flex-grow">
-                    "{client.review}"
-                  </p>
+                {/* Review Text */}
+                <p className="text-gray-600 leading-relaxed mb-4 md:mb-6 flex-grow">
+                  "{client.review}"
+                </p>
 
-                  {/* Client Info */}
-                  <div className="flex items-center gap-4 mt-auto">
-                    <div className="relative w-14 h-14">
-                      <Image
-                        src={client.logo}
-                        alt={client.name}
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
-                    <h4 className="font-semibold text-gray-800">
-                      {client.name}
-                    </h4>
+                {/* Client Info */}
+                <div className="flex items-center gap-4 mt-auto">
+                  <div className="relative w-14 h-14">
+                    <Image
+                      src={client.logo}
+                      alt={client.name}
+                      fill
+                      className="object-contain"
+                    />
                   </div>
+                  <h4 className="font-semibold text-gray-800">
+                    {client.name}
+                  </h4>
                 </div>
               </div>
-            ))}
-          </Slider>
-        </div>
+            </div>
+          ))}
+        </Carousel>
       </div>
-    </section>
+    </section >
   );
 };

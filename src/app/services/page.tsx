@@ -2,13 +2,14 @@ import React from "react";
 import { AppLayout } from "@/layouts";
 import { ServiceList } from "@/components/services";
 import { PageHeader, CollaborateWithUs } from "@/components/partials";
+import Services from "@/components/products/Services";
 
 export const metadata = {
   title: "Our Services - Sterling Technologies & Systems",
   description: "A comprehensive list of all the services we currently offer",
 };
 
-export default function Services() {
+export default function Service() {
   return (
     <AppLayout>
       <PageHeader
@@ -17,7 +18,8 @@ export default function Services() {
         cta="Reach Out to Us"
         link="/contact"
       />
-      <ServiceList />
+      {/* <ServiceList /> */}
+      <Services />
       <CollaborateWithUs />
     </AppLayout>
   );

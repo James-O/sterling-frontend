@@ -30,8 +30,9 @@ export default function Integration() {
           <div>
             <div className="py-8">
               {/* Tabs */}
-              <div className="flex gap-3 overflow-x-auto whitespace-nowrap pb-2 sm:flex-wrap sm:overflow-visible">
+              <div className="flex gap-3 overflow-x-auto overflow-y-hidden whitespace-nowrap pb-2 overflow-visible">
                 {steps.map((step, index) => (
+                                
                   <button
                     key={index}
                     onClick={() => setActive(index)}

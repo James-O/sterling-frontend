@@ -20,7 +20,7 @@ export default function About() {
         <Hero />
         <PerformanceAtScale />
         <ScaleAndImpact />
-        <IntegratedSolution />
+        {/* <IntegratedSolution /> */}
         <CompetitiveAdvantage />
         <CaseStudies />
         <TechStack />
