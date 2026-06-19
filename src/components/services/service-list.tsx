@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "@/layouts";
 import { serviceList } from "@/static/data";
 import { ServiceCard, AnimateY } from "../partials";
-import Services from "../products/Services";
+// import Services from "../products/Services";
 
 export default function ServiceList() {
   return (

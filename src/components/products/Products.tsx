@@ -1,5 +1,5 @@
 'use client'
-import { PageHeader } from '@/components/partials'
+// import { PageHeader } from '@/components/partials'
 import { Container } from '@/layouts'
 import Aos from 'aos';
 import { Btn } from '../partials/cta-button';

@@ -1,7 +1,7 @@
 'use client'
 import { Container } from '@/layouts'
 import React, { useEffect } from 'react'
-import MapSection from './Map'
+// import MapSection from './Map'
 import CountUp from 'react-countup';
 import AOS from 'aos';
 

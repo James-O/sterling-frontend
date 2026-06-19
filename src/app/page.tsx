@@ -1,4 +1,4 @@
-import { AppLayout, Container } from "@/layouts";
+import { AppLayout} from "@/layouts";
 import {
   Hero,
   Services,
