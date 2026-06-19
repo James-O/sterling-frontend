@@ -3,47 +3,22 @@ import { PageHeader } from '@/components/partials'
 import { Container } from '@/layouts'
 import Aos from 'aos';
 import { Btn } from '../partials/cta-button';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
+
+
 export default function Products() {
-    // const productsData = [
-    //     {
-    //         id: 1,
-    //         title: "Smart Power",
-    //         subtitle: "Utility Billing & Customer Information System",
-    //         body: "Smart Power is our flagship utility management platform, providing a comprehensive billing infrastructure and Customer Information System (CIS). It supports multiple billing methodologies — including feeder-wise, district-wise, transformer-level, and availability-based billing — enabling discos to manage millions of customers with accuracy and efficiency. Built with deep integration across the utility value chain."
-    //     },
-    //     {
-    //         id: 2,
-    //         title: "QuickCash",
-    //         subtitle: "Collection & Third-Party Payment Network Platform",
-    //         body: "QuickCash is a robust collection and payment network platform designed for utility companies and service providers. It includes a powerful sub-account module for comprehensive debt management, supports third-party vendor integrations, and provides real-time analytics through its built-in SPI/reporting engine. QuickCash serves as the financial backbone for vending, collection, and revenue assurance operations."
-    //     },
-    //     {
-    //         id: 3,
-    //         title: "QuickPay",
-    //         subtitle: "STS Token-Based & AMI Vending Platform",
-    //         body: "QuickPay is our multi-mode vending platform supporting both Standard Transfer Specification (STS) token-based prepaid meters and Advanced Metering Infrastructure (AMI) smart meters. AMI-enabled vending allows remote connect/disconnect, wallet-based energy control, and automated credit threshold management — eliminating the need for physical token distribution while improving customer experience and collection rates."
-    //     },
-    //     {
-    //         id: 4,
-    //         title: "Postpaid Billing System",
-    //         subtitle: "Metered & Non-Metered Postpaid Billing",
-    //         body: "Our postpaid billing solution handles both metered customers (traditional and digital meter reading) and unmetered customers through availability-based and estimated billing models. It supports pre-billing runs, alignment workflows, multi-level bill generation, and automated bill sheet production — fully configurable to regulatory and tariff requirements across any distribution network."
-    //     },
-    //     {
-    //         id: 5,
-    //         title: "SPI / Analytics",
-    //         subtitle: "Vendor Transaction Analytics & Reporting",
-    //         body: "Our analytics module delivers real-time and historical insights into vendor performance, collection trends, customer segments, and revenue patterns. Dashboards provide at-a-glance views of prepaid/postpaid splits, MD vs. non-MD customers, tariff distributions, and feeder-level analysis — giving tenants and administrators the intelligence needed to drive operational decisions."
-    //     },
-    // ]
+    const tabsRef = useRef<HTMLDivElement>(null);
     const [activeTab, setActiveTab] = useState('smartpower');
     const tabs = [
         { id: 'smartpower', label: 'Smart Power' },
         { id: 'quickcash', label: 'QuickCash' },
         { id: 'quickpay', label: 'QuickPay' },
         { id: 'postpaid', label: 'Postpaid Billing' },
-        { id: 'analytics', label: 'SPI/Analytics' },
+        // { id: 'analytics', label: 'SPI/Analytics' },
+        { id: 'smartbilling', label: 'Smart Power Billing' },
+        { id: 'smartvending', label: 'Smart Power Vending' },
+        { id: 'revenueassurance', label: 'Revenue Assurance Analytics' },
+        { id: 'energytheftmgt', label: 'Energy Theft Management' },
     ];
     useEffect(() => {
         Aos.init()
@@ -59,16 +34,21 @@ export default function Products() {
                             │   platforms built for scale</h2>
                     </div>
                     <div
-                        className="flex gap-4 w-full mb-8 pb-2 overflow-x-auto 
-                        whitespace-nowrap sm:flex-wrap sm:overflow-visible
-                        "
+                        ref={tabsRef}
+                        className="
+                                flex gap-4 w-full mb-8 pb-2
+                                overflow-x-auto overflow-y-hidden
+                                whitespace-nowrap
+                                scrollbar-hide
+                                cursor-grab active:cursor-grabbing
+                                select-none"
                     >
                         {tabs.map(tab => (
                             <button
                                 key={tab.id}
                                 onClick={() => setActiveTab(tab.id)}
                                 className={`
-                                    px-6 py-3 rounded-lg font-semibold transition
+                                    px-6 py-3 font-semibold transition
                                     flex-shrink-0 w-[200px] sm:w-auto
                                     ${activeTab === tab.id
                                         ? 'bg-blue-950 text-white shadow-lg'
@@ -92,9 +72,6 @@ export default function Products() {
                                         Utility Billing & Customer Information System
                                     </h4>
                                 </div>
-                                {/* <p className="text-gray-700 leading-relaxed text-lg">
-                                    Smart Power is our flagship utility management platform, providing a comprehensive billing infrastructure and Customer Information System (CIS). It supports multiple billing methodologies — including feeder-wise, district-wise, transformer-level, and availability-based billing — enabling discos to manage millions of customers with accuracy and efficiency. Built with deep integration across the utility value chain.
-                                </p> */}
                                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
                                     <div className='w-full' data-aos='zoom-out'>
                                         <img src="/images/smartpower.jpg" alt="smartpower"
@@ -249,7 +226,7 @@ export default function Products() {
                             </div>
                         )}
 
-                        {activeTab === 'analytics' && (
+                        {/* {activeTab === 'analytics' && (
                             <div className="space-y-6">
                                 <div className="border-l-4 border-blue-950 pl-6">
                                     <h3 className="text-3xl font-bold text-blue-900 mb-2">
@@ -259,9 +236,6 @@ export default function Products() {
                                         Vendor Transaction Analytics & Reporting
                                     </h4>
                                 </div>
-                                {/* <p className="text-gray-700 leading-relaxed text-lg">
-                                    Our analytics module delivers real-time and historical insights into vendor performance, collection trends, customer segments, and revenue patterns. Dashboards provide at-a-glance views of prepaid/postpaid splits, MD vs. non-MD customers, tariff distributions, and feeder-level analysis — giving tenants and administrators the intelligence needed to drive operational decisions.
-                                </p> */}
                                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
                                     <div className='w-full' data-aos='zoom-out'>
                                         <img src="/images/spi.jpg" alt="smartpower"
@@ -291,7 +265,117 @@ export default function Products() {
                                     />
                                 </div>
                             </div>
-                        )}
+                        )} */}
+
+                        {
+                            activeTab === 'smartbilling' && (
+                                <div className='space-y-6'>
+                                    <div className="border-l-4 border-blue-950 pl-6">
+                                        <h3 className="text-3xl font-bold text-blue-900 mb-2">
+                                            Smart Power Billing System
+                                        </h3>
+                                        <h4 className="text-xl font-semibold text-primary italic mb-4">
+                                            Advanced billing module within the Smart Power ecosystem.
+                                        </h4>
+                                    </div>
+                                    <div>
+                                        <p>Advanced billing module within the Smart Power ecosystem.
+                                            Handles complex utility billing scenarios including prepaid and
+                                            postpaid models, multi-tariff structures, automated invoice
+                                            generation, and real-time billing analytics for utility providers.</p>
+                                    </div>
+                                    <div>
+                                        <Btn
+                                            title='Learn More'
+                                        />
+                                    </div>
+                                </div>
+                            )
+                        }
+                        {
+                            activeTab === 'smartvending' && (
+                                <div className='space-y-6'>
+                                    <div className="border-l-4 border-blue-950 pl-6">
+                                        <h3 className="text-3xl font-bold text-blue-900 mb-2">
+                                            Smart Power Vending System
+                                        </h3>
+                                        <h4 className="text-xl font-semibold text-primary italic mb-4">
+                                            Comprehensive prepaid electricity vending solution
+                                        </h4>
+                                    </div>
+                                    <div>
+                                        Comprehensive prepaid electricity vending solution. Enables
+                                        STS-compliant token generation, multi-channel distribution
+                                        (USSD, mobile app, web, POS), real-time transaction processing,
+                                        and seamless integration with payment gateways for utility
+                                        vendors and distributors.
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <Btn
+                                                title='Learn More'
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        }
+                        {
+                            activeTab === 'revenueassurance' && (
+                                <div className='space-y-6'>
+                                    <div className="border-l-4 border-blue-950 pl-6">
+                                        <h3 className="text-3xl font-bold text-blue-900 mb-2">
+                                            Revenue Assurance Analytics
+                                        </h3>
+                                        <h4 className="text-xl font-semibold text-primary italic mb-4">
+                                            Real-time collections, predictive insights, executive clarity
+                                        </h4>
+                                    </div>
+                                    <div>
+                                        Comprehensive prepaid electricity vending solution. Enables
+                                        STS-compliant token generation, multi-channel distribution
+                                        (USSD, mobile app, web, POS), real-time transaction processing,
+                                        and seamless integration with payment gateways for utility
+                                        vendors and distributors.
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <Btn
+                                                title='Learn More'
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        }
+                        {
+                            activeTab === 'energytheftmgt' && (
+                                <div className='space-y-6'>
+                                    <div className="border-l-4 border-blue-950 pl-6">
+                                        <h3 className="text-3xl font-bold text-blue-900 mb-2">
+                                            Energy Theft Management
+                                        </h3>
+                                        <h4 className="text-xl font-semibold text-primary italic mb-4">
+                                            AI-powered energy theft detection leveraging smart meter data and advanced analytics
+                                        </h4>
+                                    </div>
+                                    <div>
+                                        AI-powered energy theft detection leveraging smart meter
+                                        data and advanced analytics. Real-time tamper alerts,
+                                        consumption anomaly detection, transformer-level loss
+                                        analysis, and automated field inspection workflows to reduce
+                                        non-technical losses and protect revenue.
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <Btn
+                                                title='Learn More'
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        }
                     </div>
                 </Container>
             </div>

@@ -7,8 +7,8 @@ export default function TechStack() {
         {
             id: 1,
             title: "Infrastructure:",
-            service1: "Cloud-Native Architecture (AWS/Azure)",
-            service2: "Microservices Design",
+            service1: "AI-first, Cloud-first, Mobile-first Infrastructure",
+            service2: "Microservices Architecture",
             service3: "Auto-scaling & Load Balancing",
             service4: "99.9% Uptime SLA",
         },
@@ -30,27 +30,27 @@ export default function TechStack() {
         },
         {
             id: 4,
-            title: " Tech Stack:",
+            title: "Enterprise Grade Tech:",
             service1: (
                 <>
-                    <span className='font-bold'>Backend:</span> Node.js, Python, Go
+                    <span >AMI (Advanced Metering Infrastructure)</span>
                 </>
             ),
             service2: (
                 <>
-                    <span className='font-bold'>Frontend:</span> React, Next.js
+                    <span>AMR (Automated Meter Reading)</span>
                 </>
             ),
-            service3: (
-                <>
-                    <span className='font-bold'>Mobile:</span> React Native (iOS & Android)
-                </>
-            ),
-            service4: (
-                <>
-                    <span className='font-bold'>Database:</span> PostgreSQL, Redis, TimescaleDB
-                </>
-            ),
+            // service3: (
+            //     <>
+            //         <span className='font-bold'>Mobile:</span> React Native (iOS & Android)
+            //     </>
+            // ),
+            // service4: (
+            //     <>
+            //         <span className='font-bold'>Database:</span> PostgreSQL, Redis, TimescaleDB
+            //     </>
+            // ),
         },
     ]
     return (
@@ -62,11 +62,11 @@ export default function TechStack() {
                         techdata.map(tech => (
                             <div key={tech.id} className='bg-white p-4 rounded'>
                                 <h1 className='font-bold text-lg mb-4 text-blue-950'>{tech.title}</h1>
-                                <ul className='list-disc list-inside space-y-4'>
-                                    <li>{tech.service1}</li>
-                                    <li>{tech.service2}</li>
-                                    <li>{tech.service3}</li>
-                                    <li>{tech.service4}</li>
+                                <ul className="list-disc list-inside space-y-4">
+                                    {tech.service1 && <li>{tech.service1}</li>}
+                                    {tech.service2 && <li>{tech.service2}</li>}
+                                    {tech.service3 && <li>{tech.service3}</li>}
+                                    {tech.service4 && <li>{tech.service4}</li>}
                                 </ul>
                             </div>
                         ))

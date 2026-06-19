@@ -7,12 +7,12 @@ export default function CompetitiveAdvantage() {
             id: 1,
             icon: "/images/rocket.svg",
             title: "Deploy in Weeks, Not Months",
-            text: "Cloud-native architecture means you’re live in 4-6 weeks, not 6 months"
+            text: "Cloud-native architecture means you're live in 4-6 weeks, not 6 months"
         },
         {
             id: 2,
             icon: "/images/badge-dollar-sign.svg",
-            title: "40% Lower TCO",
+            title: "Lower TCO Compared to other Traditional Enterprises",
             text: "Integrated platform eliminates costly system integrations and maintenance"
         },
         {
@@ -58,18 +58,18 @@ export default function CompetitiveAdvantage() {
                             </tr>
                             <tr className='h-12'>
                                 <td className='pl-2 md:pl-8'>Scalability</td>
-                                <td>✓ Cloud-based</td>
+                                <td>✓ Cloud-based & On premises</td>
                                 <td>△ On-premises</td>
                             </tr>
                             <tr className='bg-gray-50 h-12 text-gray-900 font-semibold'>
                                 <td className='pl-2 md:pl-8'>Total Cost of Ownership</td>
-                                <td>40% lower</td>
-                                <td>Enterprise pricing</td>
+                                <td>Lower</td>
+                                <td>Higher</td>
                             </tr>
                             <tr className='h-12'>
                                 <td className='pl-2 md:pl-8'>Customer Satisfaction</td>
-                                <td>95%+</td>
-                                <td>70-80%</td>
+                                <td>Higher</td>
+                                <td>Lower</td>
                             </tr>
                             <tr className='bg-gray-50 h-12 text-gray-900 font-semibold'>
                                 <td className='pl-2 md:pl-8'>STS Compliance</td>
