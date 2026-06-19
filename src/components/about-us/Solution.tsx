@@ -1,7 +1,7 @@
 'use client'
 import { Container } from '@/layouts';
 import React, { useEffect, useState } from 'react'
-import { CTAButton } from '../partials';
+// import { CTAButton } from '../partials';
 import { Btn } from '../partials/cta-button';
 import Aos from 'aos';
 

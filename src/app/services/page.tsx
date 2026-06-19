@@ -1,6 +1,6 @@
 import React from "react";
 import { AppLayout } from "@/layouts";
-import { ServiceList } from "@/components/services";
+// import { ServiceList } from "@/components/services";
 import { PageHeader, CollaborateWithUs } from "@/components/partials";
 import Services from "@/components/products/Services";
 

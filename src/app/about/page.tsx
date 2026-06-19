@@ -3,7 +3,7 @@ import { AppLayout } from "@/layouts";
 import Hero from '@/components/about-us/Hero';
 import PerformanceAtScale from '@/components/about-us/PerfAtScale';
 import ScaleAndImpact from '@/components/about-us/ScaleAndImpact';
-import IntegratedSolution from '@/components/about-us/Solution';
+// import IntegratedSolution from '@/components/about-us/Solution';
 import CompetitiveAdvantage from '@/components/about-us/CompetitiveAdvantage';
 import CaseStudies from '@/components/about-us/CaseStudies';
 import TechStack from '@/components/about-us/TechStack';
