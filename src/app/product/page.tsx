@@ -6,7 +6,7 @@ import Products from '@/components/products/Products'
 import { AppLayout } from '@/layouts'
 import React from 'react'
 
-export default function ProductsAndServices() {
+export default function ProductsPage() {
 
   return (
     <AppLayout>
