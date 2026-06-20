@@ -193,9 +193,6 @@ export default function Products() {
                                         Metered & Non-Metered Postpaid Billing
                                     </h4>
                                 </div>
-                                {/* <p className="text-gray-700 leading-relaxed text-lg">
-                                    Our postpaid billing solution handles both metered customers (traditional and digital meter reading) and unmetered customers through availability-based and estimated billing models. It supports pre-billing runs, alignment workflows, multi-level bill generation, and automated bill sheet production — fully configurable to regulatory and tariff requirements across any distribution network.
-                                </p> */}
                                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
                                     <div className='w-full' data-aos='zoom-out'>
                                         <img src="/images/postpaid4.jpg" alt="smartpower"
